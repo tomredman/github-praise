@@ -1,13 +1,19 @@
 {
-  "name": "Github Praise",
-  "version": "0.1",
+  "name": "Analyze Impersonate",
+  "version": "1.0",
   "manifest_version": 2,
-  "minimum_chrome_version": "37",
-  "content_scripts": [
-  {
-    "matches": ["https://github.com/*"], // /*/blob*
-    "js": ["jquery-2.2.2.min.js", "praise.js"]
-  }
-  ],
-  "permissions": []
+  "minimum_chrome_version": "65",
+  "browser_action": {
+    "default_icon": "logo.png"
+  },
+  "background" : {
+    "scripts" : ["onClick.js"]
+  },
+  "permissions": [
+    "activeTab",
+    "cookies",
+    "tabs",
+    "https://buffer.com/",
+    "https://analyze.buffer.com/"
+  ]
 }
